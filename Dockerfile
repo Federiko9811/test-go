@@ -1,12 +1,13 @@
-FROM golang:1.20-alpine
+FROM golang:1.20
 
-WORKDIR /go
+WORKDIR /app
 
 COPY go.mod .
-COPY main.go .
+#COPY go.sum .
+COPY . .
 #
 #RUN go mod download
 
-RUN go build -o bin .
+RUN go build -o main .
 
-ENTRYPOINT ["/go/bin"]
+ENTRYPOINT ["/app/main"]

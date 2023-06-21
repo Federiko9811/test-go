@@ -7,6 +7,6 @@ COPY main.go .
 #
 #RUN go mod download
 
-RUN go build -o /bin .
+RUN go build -o bin .
 
 ENTRYPOINT ["/go/bin"]

@@ -1,0 +1,8 @@
+version: "3"
+
+services:
+  go:
+    build: .
+    image: go-backend
+    container_name: go-backend-container
+    restart: unless-stopped

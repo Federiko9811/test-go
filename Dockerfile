@@ -3,7 +3,6 @@ FROM golang:1.20
 WORKDIR /go
 
 COPY go.mod .
-COPY go.sum .
 COPY main.go .
 
 RUN go mod download
